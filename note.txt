@@ -1,0 +1,1 @@
+App React ko tương thích vs IE (mở ko chạy luôn)
