@@ -1,0 +1,153 @@
+1) "Ban lãnh đạo của ME" cụ thể là ai? Ban Giám đốc? Hiệu trưởng?
+
+=> [Chưa biết cụ thể], nhớ có lần nào a Tiến nói là chị Huyên sẽ vào coi 1 lượt các báo cáo số 
+   liệu tổng quát, kiểu dạng Dashboard.
+
+
+
+2) DS trường tổng (1500 trường) từ đâu mà có?
+   Bữa giờ mình cứ nói là "Hiệu trưởng của Major" giao xuống, vậy thì có đúng là "Hiệu trưởng của
+   Major" ko hay ai là người chuyển các data đó qua cho phòng Sales?
+
+   Nếu có thay đổi trong danh sách tổng thì sao? (đổi tên trường, địa chỉ, ngừng hoạt động,...)
+   Ai là người lấy các thông tin thay đổi đó? Ai là người cập nhật lại các thay đổi?
+
+=> Bữa làm vs a Nguyên thì nói là thông tin thay đổi do Salesman đi về và cập nhật lại, sau đó ping
+   cho Sales Manager/Admin chờ approve để update vào DB tổng trường (1500 trường).
+   Tức là:
+    + Salesman là người lấy các thông tin thay đổi đó.
+    + Hệ thống notify cho Sales Manager/Admin là có sự thay đổi.
+    + Sales Manager/Admin cho phép thay đổi đó đc đè lên thông tin hiện tại trong DB hay ko.
+
+
+
+3) Danh sách mục tiêu có bao gồm các trường của DS cũ?
+   Một đợt như vậy trích ra khoảng bao nhiêu trường mục tiêu?
+
+=> DS target schools có thể bao gồm các trường cũ. Mục đích của lần đó khác nhau
+   (sales mới =/= sales lại =/= chăm sóc...).
+   Một đợt như vậy trích ra bn thì tùy họ, mình ko nắm rõ.
+
+
+
+4) DS assign ngắn hạn / dài hạn là sao?
+   Mình chỉ biết cái dài hạn là theo 1 phase còn ngắn hạn là theo tuần hay gì? Chỗ này chưa rõ.
+   Sales Manager có giao task hàng tuần ko hay Salesman tự lên kế hoạch cho tuần của mình?
+=> Chỉ xét số lượng task dc assign. Mỗi task là 1 trường, số lượng trường đc assign.
+(Gia)
+
+====> Bữa quên chưa coi file note cuộc họp gần đây nhất vs a Tiến. Trong file đó có ghi a Tiến
+(Hà)  muốn giao task theo tuần nữa. Vậy thì chắc là sẽ thêm 1 field "ngày giao việc" và "deadline",
+      hoặc là thêm 1 field "prority".
+      Cái này để phải hỏi lại a Tiến sau.
+
+
+
+5) Bỏ phần Salesman tự đề xuất trường và đổi trường. Cái này gặp mặt ở ngoài thôi, ko đưa vào hthống.
+   << Có nên đưa thêm 1 usecase là Salesman xin đổi trường ko (từ chối task đc giao)? >>
+
+=> Ko, cái này giải quyết gặp mặt ở ngoài thôi. Ko hỗ trợ chức năng này trên hệ thống.
+
+
+
+6) Manager có quyền xóa/sửa task đã giao ko? (đổi PIC)
+
+=> Có.
+   Trong file "Bản mô tả hệ thống" cũng đã đề cập đến. Ko nhớ hôm đó làm sao mà em lại ko trả lời
+   câu này. "Nếu Salesman có gặp khó khăn và không thể tiếp tục, Sales Manager có thể chỉ định 
+   Salesman khác tiếp nhận trường đó và sẽ tiếp tục từ bước mà Salesman tiền nhiệm đã dừng."
+
+
+
+7) Cần lưu lại trong DB lần đi trường này đang nằm ở bước mấy trong quy trình chuẩn.
+--> Sẽ dễ hiển thị History nếu sau này chuyển giao cho Salesman khác.
+
+=> Cái này có thể dặn họ ghi trong cột "Note" cũng đc. Hiện tại thấy file của họ cột "Note" đang
+   trống trơn. Vì vậy nếu mình tận dụng cái này thì mình vừa ko cần thêm field trong DB, vừa ko
+   phá cấu trúc tổ chức file của họ => Import data dễ hơn.
+
+
+
+8) Anh Tiến muốn xem cái gì ở báo cáo chuyến đi nhất? Thông tin nào quan trọng nhất?
+   Có muốn phân loại báo cáo tốt/xấu ko hay anh muốn coi chung chung như nhau?
+  
+   [Nếu có]
+   Kết quả tốt/xấu đc đánh dấu (bằng màu) dựa trên tiêu chí nào?
+   Dựa trên việc gặp đc hay ko, hay xấu còn có thể là gặp mà HT từ chối/ko thiện chí?
+
+=> Hiện tại mình cứ làm cùng màu trước. Sẽ note lại cho lần tới họp vs a Tiến thì xác nhận lại sau.
+
+  
+
+9) Dựa vào đâu để biết ngày hôm đó Salesman đã đi gặp bao nhiêu trường?
+   Dựa vào số dòng trong "Báo cáo đi trường" hay dựa vào "Workplan"? Cái nào quan trọng hơn?
+
+   Lỡ Salesman ko hoàn thành chỉ tiêu 3 trường thì sao, có xử lí exception trường hợp này như nào?
+
+/*
+=> Có thể dùng cái này để đưa vào thuật toán đánh giá hiệu quả làm việc của Salesman đó trong 
+   tuần/tháng/phase.	=> Vừa có thuật toán, vừa thêm đc phần lượng hóa.
+*/
+
+=> Dựa vào "Báo cáo đi trường".
+   Workplan chỉ là cái gì đó cá nhân thôi, sẽ ko xét trên đó.
+   Nếu Salesman ko hoàn thành chỉ tiêu 3 trường/ngày thì mình sẽ có 1 biến gì đó lưu lại, nó nằm
+   trong phần thuật toán của mình chứ ko có exception gì ở đây cả.
+   Để tăng UX thì nhớ báo lên màn hình cho họ kiểu kiểu như:
+	"Hey, hôm nay bạn chưa đạt chỉ tiêu này! Cố gắng hơn ngày mai nha!"
+	"Hey, hôm qua bạn chưa đạt chỉ tiêu này! Cố gắng hơn hôm nay nha!"
+
+
+
+10) Workplan là Salesman tự lập rồi Sales Manager vào coi hay là Sales Manager lập cho Salesman?
+
+=> Theo như trong "Bản mô tả hệ thống.docx" thì em ghi là Sales Manager lập, nhưng nghĩ nó vô lý
+   quá, có thể bữa đó đi về em ghi sai...(?)
+   Hiện tại thì mình sẽ làm theo hướng Workplan của ai thì người đó tự lập.
+   Sales Manager được quyền xem của mọi người.
+
+
+
+11) Vs trường đến bước 7 mà vẫn chưa ký thành công thì khi đóng phase, hệ thống sẽ tự chuyển trường
+    đó vào DS chăm sóc hay việc này do Sales Manager set?
+    Nếu do hthống thì chuyển tới câu 12.
+
+=> Theo như anh Nguyên và anh Duy Anh nói, quy trình ở công ty thực tế, cuối kì phòng Sales sẽ có 
+   1 cuộc họp tổng kết. Mọi người sẽ báo cáo và đưa ra định hướng, đề ra chiến lược cho phase tiếp
+   theo. Do đó, mọi người sẽ cùng quyết định có nên đưa trường này vào DS chăm sóc ko trong buổi
+   họp đấy. Sau đó, Sales Manager sẽ là người set lại status của trường trên phần mềm.
+
+
+
+12) Có cần lưu lại ngày bắt đầu và kết thúc Phase ko? Có cần quản lý Phase ko?
+    Ai quản lý (set startDate/endDate)?
+
+    Nếu có thì cần vẽ Use cases cho phần này.
+
+=> Em nghĩ là mình sẽ làm thêm phần này luôn nhỉ do scope mình hơi bé.
+   Nhưng trước mắt thì cứ hoàn thành hết những gì như bữa giờ bàn đã rồi sau này còn thời gian sẽ
+   phát triển thêm và sửa/bổ sung trong UC Diagram + UC Spec.
+
+
+
+13) Phần báo cáo của Sales Manager cho cấp trên là báo cáo những gì? Dữ liệu từ đâu?
+    Đó là file Excel hay PDF Infographic?
+    Khi nào thì báo cáo? (Cuối tháng? / Cuối phase? /...)
+
+    Chưa vẽ usecase cho trường hợp này? (Nó có phải là UC "Export file" ko?)
+
+=> Phần báo cáo này sẽ là thứ trình trong cuộc họp đã nói ở trên phải ko? Vậy thì nó sẽ là export
+   file PDF và Excel luôn, tùy bên họ muốn gì.
+ 
+   Trong file note của lần gặp a Tiến gần đây, a Tiến có suggest 1 option là coi báo cáo số liệu
+   dạng chart như Google Form.
+
+
+
+14) Chưa có / Cần làm rõ usecase "Assign Salesman" (nếu có thay đổi thì sao? Làm sao để phân biệt
+    vs lần assign đầu?).
+
+=> Dù là Assign lần đầu hay Assign lại thì chung quy nó vẫn sẽ gọi là chức năng "Assign Salesman".
+   Để làm rõ 2 trường hợp này, mình sẽ viết trong UC Spec.
+
+

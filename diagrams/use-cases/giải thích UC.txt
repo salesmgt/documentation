@@ -2,7 +2,8 @@ Giải thích UC Diagram (về chức năng nào đưa vào, chức năng nào k
 			a
 
 1. Unauthorized User (đây là user chưa login, ko dùng từ "Guest")
-   + Login (Trong UC Spec sẽ ghi thêm phần "Remember me" nếu muốn làm cái này).
+   + UC-01:
+     Login (Trong UC Spec sẽ ghi thêm phần "Remember me" nếu muốn làm cái này).
    + Vì đây là hth nội bộ trong cty nên sẽ ko có chức năng "Register" mà account sẽ do Admin tạo.
 
  (?) Tương tự, ko hỗ trợ chức năng "Forget Password". Quên Pass thì liên hệ Admin reset/cấp lại.
@@ -18,8 +19,9 @@ Giải thích UC Diagram (về chức năng nào đưa vào, chức năng nào k
 
 2. Authorized User (đây là user đã login, tên gọi chung, ko phân biệt role nào;
 		    user này bao gồm tất cả các function chung mà các role đều có)
-   + View Profile <----<<extends>>---- Edit Profile
-   + Logout
+   + UC-02:
+     View Profile <----<<extends>>---- Edit Profile (UC-03)
+   + UC-04: Logout
 
  (?) "Get/Receive notifications" có thực sự cần thiết?
  /*
@@ -40,34 +42,108 @@ Giải thích UC Diagram (về chức năng nào đưa vào, chức năng nào k
     nào cả (anh Tiến đc làm gì trong hth, chị Tuyền đc làm gì trong hth,...).
  */
 
-   + Manage all schools: import list ban đầu, add 1 trường lẻ, update các th.tin của trường,
+   + UC-05:
+     Manage accounts: Tạo mới, update (set status isActive true <-> false nếu nghỉ làm, đổi role
+		      khi thăng chức, reset password, update info cơ bản), view all, view detail.
+   + UC-06:
+     Manage all schools: import list ban đầu, add 1 trường lẻ, update các th.tin của trường,
 			 approve cho sự thay đổi th.tin trường (nếu th.tin từ Salesman submit khác
 			 vs th.tin hiện có trong DB hth), view all, view detail, export ra file(?).
-   + Manage accounts: Tạo mới, update (set status isActive true <-> false nếu nghỉ làm, đổi role
-		      khi thăng chức, reset password, update info cơ bản), view all, view detail.
-
+ /*
+    Cần tìm hiểu lại xem Import và Export có phải là 1 chức năng ko hay chỉ là 1 step thôi.
+ */
+ 
 
 =============
 
 
 4. Salesman		(kế thừa "Authorized User")
  /*
-    Role Salesman có thể 
+    - Role Salesman bao gồm những chức năng của phần mềm mà 1 người salesman sẽ dùng chứ ko phải là
+    cụ thể 1 cá nhân nào cả (anh Tiến đc làm gì trong hth, chị Tuyền đc làm gì trong hth,...).
+    - Salesman khi dùng phần mềm này chỉ có 3 nhóm chức năng chính dưới đây.
  */
 
-   + Manage Workplan / Personal Activity.
-   + Manage target schools <---<<extends>>--- View history of assigned schools (filter by year)
-			   <---<<extends>>--- Manage Reports
-   + Manage Reports (Create + View) 
+
+(?) "View Dashboards" có thực sự cần thiết?
+ /*
+    Em tham khảo qua 1 vài Docs đồ án thì ko thấy nhóm nào có chức năng "View Dashboards". Có thể
+    phần mềm của họ ko có, nhưng em nghĩ lại thì cũng thấy nó hơi thừa, không biết có được coi là
+    1 chức năng ko, do Dashboard thì trích xuất data (như thầy và các anh nói) và view cái mớ data
+    đc trích xuất đó thì có gì quan trọng trong hệ thống của mình nên em bỏ UC này.
+ */
+
+   + UC-07: 
+     Manage target schools: Chỉ có mỗi việc là vào coi list trường mục tiêu chung và list trường
+			    mình đc chỉ định, rồi coi chi tiết cái task đó (ngày giờ giao tasks, 
+			    contact, info trường, tiến độ cái task đang ở bước nào rồi,...)
+     => Mà nếu chỉ có mỗi cái "View" như vậy thì ở đây có cần Generalization ko hay cứ để Salesman
+	nối thẳng vào "View list of..." nhỉ?
+ /*
+    Chỗ này em vẫn muốn để từ "task" hơn là "target school" vì "target school" thì ko thể hiện đc
+    là trong detail có bao gồm ngày giao task và deadline của task đó, cả phần tiến độ nữa.
+    Em nghĩ mình cần thống nhất lại chỗ này.
+ */
 
 
+   + UC-08:
+     Manage Reports (Create + View, ko cho Edit và Delete)
+ /*
+    - Hiện em đang để "View history of reports by schools" là 1 phần trong cái "View all reports",
+    nhưng em thấy UC này cũng có thể <<extends>> từ UC "View task detail" nữa nên anh cho em xin
+    ý kiến của anh.
+    Lúc hiện thực code mình vẫn sẽ cho xem report trong phần task detail luôn do nó sẽ tiện cho
+    Salesman mới coi đc thành quả của Salesman cũ ngay trong task đó để dễ tiếp quản công việc,
+    hoặc là Sales Manager sẽ nắm đc tiến độ của mỗi task luôn (tăng UX).
+
+    - Lúc đầu em tính để là UC lớn "Manage Reports" ---<<extends>>---> "Manage target schools"
+    nhưng sau em thấy nó ko cần thiết phải móc nối vào nhau lắm do thằng Report nó có thể đứng 1
+    mình cũng đc mà nằm trong màn hình "View Task Details" (như hồi a Phú + a Gia nói ở quán Ông
+    Bầu (ĐBP, Q.BT)) cũng đc nên hiện em tách 2 thằng là 2 nhóm UC độc lập luôn.
+    Nó cũng phù hợp với Prototype em định là khi login vào sẽ thấy trang Report đầu tiên, tức là
+    Report ko nhất thiết phụ thuộc vào Task. Muốn coi Report trong Task vẫn đc luôn. Là sitemap sẽ
+    có 2 đường dẫn tới trang Report đó.    
+ */
+
+
+   + UC-09:
+     Manage Workplan / Personal Activity (CRUD PersonalActivity).
+ /*
+    Giải thích:
+      Ở đây em dùng 2 từ khác nhau là "Workplan" và "Personal Activity", thì em nghĩ cái Workplan
+      là cái bảng to, tổng chung. Trong Workplan bao gồm nhiều Personal Activities.
+      Tức là khi quản lý và view là coi cả cái to luôn còn CUD mới là từng cái nhỏ.
+      Đây là về vấn đề dùng từ thôi. Hai anh cho em xin ý kiến của 2 anh nhé.
+ */
+ 
+
+=============
 
 
 5. Sales Manager	(kế thừa "Salesman")
  /*
     Role Sales Manager đc quyền làm tất cả những gì Salesman có thể làm.
-    Tuy nhiên, để mở rộng ra sau này, em nghĩ nếu có thể thì mình nên làm kiểu privileges luôn
-    
+    Tuy nhiên, để mở rộng ra sau này, em nghĩ nếu có thể thì mình nên làm kiểu privileges để có
+    Manager này thì có quyền này, Manager khác lại ko có, đại loại thế. Này là lúc code thôi chứ
+    khi vẽ UC em vẫn sẽ vẽ theo hướng các chức năng mà Actor này thực hiện đc vs phần mềm.
  */
 
-   + Manage Salesman: view all, view detail, view workplan, view history of assigned schools.
+   + UC-10:
+     Manage Salesman: view all salesmen, view salesman's detail, view workplan, view history of
+		      assigned schools (filter by year) của người salesman đó.
+
+   + UC-11:
+     Manage target schools: add 1 list target schools, remove selected schools (đc phép nhiều),
+			    view detail 1 school và vào trong trang detail đó để assign PIC cho
+			    school đó và chỉnh priority + deadline nếu muốn.
+ /*
+  - Có nghĩa là để có đc list target schools này: 
+     o  Hoặc là Sales Manager import file .xls từ "cấp trên" đưa xuống.
+     o  Hoặc là Admin (người nắm DB tổng) có 1 chức năng là trích ra DS target schools từ DS tổng.
+     o  Hoặc là Sales Manager thấy đc DS tổng trường và tự trích ra DS target schools.
+    => Cần làm rõ lại vs a Tiến hoặc nhóm thống nhất chọn ra 1 phương án.
+
+    - Dù là Assign lần đầu hay Assign lại thì nó vẫn quy về tên gọi là chức năng "Assign salesman"
+    nên ở đây em chỉ để 1 UC. Muốn mô tả kỹ hơn thì sẽ nằm ở phần UC Spec.
+ */
+
