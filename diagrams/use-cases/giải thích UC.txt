@@ -146,4 +146,16 @@ Giải thích UC Diagram (về chức năng nào đưa vào, chức năng nào k
     - Dù là Assign lần đầu hay Assign lại thì nó vẫn quy về tên gọi là chức năng "Assign salesman"
     nên ở đây em chỉ để 1 UC. Muốn mô tả kỹ hơn thì sẽ nằm ở phần UC Spec.
  */
+ 
 
+=============
+
+
+6. System Handler
+   + UC-12:
+     Send notification
+ /*
+   - Nếu mình dùng Noti thì để, ko thì bỏ cũng đc.
+   - Nếu mình tự code phần này (hth của mình gửi noti) thì nó là System Handler, còn nếu dùng của
+     bên có 3 (Firebase) thì ở đây ghi Actor là "Firebase".
+ */
