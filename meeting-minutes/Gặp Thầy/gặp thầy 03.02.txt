@@ -1,0 +1,15 @@
+Meeting Minute:
+- Lấy template trên LMS.
+
+- Viết câu đơn, đừng dùng câu phức, ngữ pháp gì quá.
+  (Subject + Verb + Object)
+
+- Tránh quan hệ composition trong Class Diagram
+
+- Các thành viên đều phải trả lời được là sao chọn kiến trúc này mà không chọn cái khác?
+  Chỉ rõ các thành phần trong đó ra.
+
+- Nếu mình tin mình đúng thì phải bảo vệ đc trước hội đồng. Hoặc mình biết mình sai ở đâu
+  thì HĐ cũng sẽ ko bắt bẻ.
+
+- Prototype: Hoàn thiện nốt tất cả các màn hình.

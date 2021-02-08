@@ -1,0 +1,73 @@
+Giải thích UC Diagram (về chức năng nào đưa vào, chức năng nào ko đưa, tại sao ko đưa, và những
+			a
+
+1. Unauthorized User (đây là user chưa login, ko dùng từ "Guest")
+   + Login (Trong UC Spec sẽ ghi thêm phần "Remember me" nếu muốn làm cái này).
+   + Vì đây là hth nội bộ trong cty nên sẽ ko có chức năng "Register" mà account sẽ do Admin tạo.
+
+ (?) Tương tự, ko hỗ trợ chức năng "Forget Password". Quên Pass thì liên hệ Admin reset/cấp lại.
+ /*
+    Hồi trước ở FPTU HCM làm thế này. Tuy nhiên, nếu muốn tiện lợi hơn cho users nếu Admin bận thì
+    sau làm thêm chức năng quên Pass cũng đc.	 	(sau này làm rồi hỏi anh Tiến muốn thế nào)
+    Khi đó, sẽ theo kiểu gửi mail về email nội bộ.
+ */
+
+
+=============
+
+
+2. Authorized User (đây là user đã login, tên gọi chung, ko phân biệt role nào;
+		    user này bao gồm tất cả các function chung mà các role đều có)
+   + View Profile <----<<extends>>---- Edit Profile
+   + Logout
+
+ (?) "Get/Receive notifications" có thực sự cần thiết?
+ /*
+    Theo như hồi học SWE thầy Hoàng, thầy nói là bên System Handler có "Send noti" thì phải có
+    bên nào nhận cái noti này chứ nên mới có UC này ở đây.
+    Tuy nhiên vì nó cũng ko quá quan trọng nên có thể bỏ cũng đc để tập trung vào các funcs chính.
+ */
+
+
+=============
+
+
+3. Administration	(kế thừa "Authorized User")
+ /*
+    Theo thông thường, bất kỳ 1 hth nào cũng cần phải có Admin nên dù trên thực tế có là 1 người
+    đi chăng nữa thì mình vẫn sẽ vẽ về mặt kỹ thuật tách bạch các role vs nhau.
+    UC Diagram sẽ chỉ thể hiện role/actor nào tác động gì vào hth chứ ko phải là cụ thể 1 cá nhân
+    nào cả (anh Tiến đc làm gì trong hth, chị Tuyền đc làm gì trong hth,...).
+ */
+
+   + Manage all schools: import list ban đầu, add 1 trường lẻ, update các th.tin của trường,
+			 approve cho sự thay đổi th.tin trường (nếu th.tin từ Salesman submit khác
+			 vs th.tin hiện có trong DB hth), view all, view detail, export ra file(?).
+   + Manage accounts: Tạo mới, update (set status isActive true <-> false nếu nghỉ làm, đổi role
+		      khi thăng chức, reset password, update info cơ bản), view all, view detail.
+
+
+=============
+
+
+4. Salesman		(kế thừa "Authorized User")
+ /*
+    Role Salesman có thể 
+ */
+
+   + Manage Workplan / Personal Activity.
+   + Manage target schools <---<<extends>>--- View history of assigned schools (filter by year)
+			   <---<<extends>>--- Manage Reports
+   + Manage Reports (Create + View) 
+
+
+
+
+5. Sales Manager	(kế thừa "Salesman")
+ /*
+    Role Sales Manager đc quyền làm tất cả những gì Salesman có thể làm.
+    Tuy nhiên, để mở rộng ra sau này, em nghĩ nếu có thể thì mình nên làm kiểu privileges luôn
+    
+ */
+
+   + Manage Salesman: view all, view detail, view workplan, view history of assigned schools.

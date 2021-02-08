@@ -1,0 +1,30 @@
+- Đại diện trường: chỉ cần 1 người là Hiệu trưởng đại diện
+		những người khác sẽ tự contact sau
+
+Export báo cáo theo cá nhân (file .xls)
+Phần tổng kết result của Google Form (a Tiến gợi ý)
+
+
+Task theo tuần
+
+
+Report trường ở 2 chỗ??
+
+
+Làm rõ, dễ hiểu hơn phần "Assigned schools" của salesman
+
+
+2 màu chủ đạo: xanh navy và vàng đậm + nền trắng
+(tham khảo các website của họ)
+
+==============
+
+Lần gặp tiếp theo:
+- Tuần đầu T2 (chốt 1 nhóm features): mùng 1-5/2 (trước Tết)
+- Sau Tết 1 phase tiếp
+
+==============
+
+Mình làm xong sẽ bàn giao toàn bộ cho phía trường, trường sẽ chuyển giao lại
+cho các nhóm sau này maintain/upgrade tiếp
+

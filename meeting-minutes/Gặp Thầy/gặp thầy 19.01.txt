@@ -1,0 +1,13 @@
+- Các nhóm tổ chức thư mục
+- Hầu hết các use cases đều có 1 trạng thái cho ứng dụng
+
+========================
+
+Nếu 
+
+Con số <= Lượng hóa (bn lớp, sales đc cái gì,..., trạng thái)
+
+Tập trung màn hình của Salesman
+Phân quyền cho Sales Manager riêng...
+
+Dashboard làm sau cùng

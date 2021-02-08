@@ -1,0 +1,25 @@
+Hàng tuần xin gặp, cho dùng thử và review từng trang
+(liên hệ các nhóm khác để đi cùng cho tiện cũng đc)
+- Tách biệt 2 version (prototype và hiện thực)
+- Prototype thì tách role, đừng gộp
+  Chừng nào code mình kế thừa sau, nhưng prototype đưa họ dùng thì rõ từng role
+  
+- Chuẩn bị câu hỏi trước khi gặp để tiết kiệm thời gian gặp,
+  đưa họ ít ít thôi, đừng gom quăng 1 cục, họ ko rảnh
+  (User flow, user cần cái gì cụ thể, làm gì ở trang nào,...)
+- Phải khéo
+- chốt HTML từng trang một, của từng role
+
+- Thông tin mình chủ động, 
+
+- Datasheet phải có search, sort
+- Thống kê phải có từ ngày...đến ngày thì mới có ý nghĩa
+
+
+- ERD ở mức logical (ko có users???, có qh nhiều..nhiều) có các thực thể cụ thể trong thực tế
+Salesman,...???
+
+
+====================
+
+Tối T3 hàng tuần gặp thầy slot 7 ở trường (theo lịch)

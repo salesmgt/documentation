@@ -1,0 +1,25 @@
+- Mqh giữa salesman và sales manager (1 Manager ql nhiều slm; 1 slm chịu sự ql của bn Manager)?
+  Có chia team ko?
+- Task có giới hạn deadline ko hay salesman đc giao 1 cục đầu kì rồi tự sắp xếp việc đi trường nào
+  ngày nào do mình?
+- Lúc giao target schools cho các salesman, có giao deadline cụ thể cho họ ko hay chỉ nói chung là
+  trong 3 tháng (cuối phase) phải xong?
+- Report (Remark) đã submit rồi thì có cho chỉnh sửa hay ko?
+- Phần Ý kiến của quản lý thì sao?
+- 1 Salesman hoàn thành xong hết việc đc giao rồi thì có xin thêm đc ko hay nghỉ?
+
+- Hỏi anh Tiến là bên anh có quản lý Hợp đồng trên phần mềm này ko?
+  Nếu ko thì dựa vào đâu để xác nhận là Salesman đã ký thành công (hoàn thành Target đc giao)?
+
+
+Nói lại anh Tiến: 
+- Phần Working History để phát triển sau đc ko? Tạm thời ở bước School này sẽ chưa triển khai.
+- Nhờ anh giải thích lại quy trình để bọn em đổ data vào. Có cần phân biệt report nào ở bước nào ko?
+  Nếu có: Muốn thêm 1 field nữa là report đó đang ở bước mấy trong quy trình ko?
+  Để sau này xuất trong History (dễ dàng hơn khi chuyển giao cv cho Salesman khác).
+  --> Đánh đổi:
+	+ Import File .xls sẽ lâu và khó khăn hơn khi phải thêm 1 cột vào tất cả các report.
+	+ Chấp nhận từ sau khi có ph.m thì phải nhập thêm 1 field bước vào nữa.
+
+
+

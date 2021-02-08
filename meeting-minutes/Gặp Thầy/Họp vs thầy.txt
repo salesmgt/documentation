@@ -1,0 +1,10 @@
+Họp vs Thầy:
+- Giữa kì nhắc thầy cho nhóm mình tự viết bản proposal.
+- Đẩy nhanh tiến độ, đưa vào dùng thực tế => Đưa họ dùng và nghiệm thu
+  => Xin bản đánh giá từ Major (xong chưa, đúng hay ko), chứng minh đảm bảo đúng business rồi để
+     tránh trường bắt bẻ.
+
+- UI phải có generate bằng code (chi tiết, cụ thể) và đưa họ sd, chỉnh sửa dựa trên 
+
+- Cuối tuần (T7) gửi thầy video/link HTML bộ khung toàn bộ, code chi tiết luôn.
+- 
