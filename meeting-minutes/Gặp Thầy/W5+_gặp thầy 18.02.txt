@@ -1,0 +1,96 @@
+- Các diagram đen trắng, đừng tô màu
+- Làm gì hiểu đó, hiểu cái mình làm
+
+Doc 2:
+Phần Project Objective, có thể ghi là:
+"Làm ra đc 1 pm giúp Major cải thiện..."
+--> Khái quát thôi chứ đừng cụ thể ngày giờ quá
+
+
+Rủi ro đưa cái high risk lên trên, low xuống dưới.
+
+Cố gắng viết chân phương, rõ ràng, dễ hiểu, người đọc đọc cái hiểu ngay.
+
+Doc 2, phần 2.x
+Chọn Scrum vì làm việc vs khách hàng, req thay đổi thường xuyên, cần cập nhật,...
+
+Doc 3:
+Eco System Map (conceptual diagram???)
+
+BUSINESS RULES CỰC KỲ QUAN TRỌNG.
+Hội Đồng hay tập trung hỏi phần này vì từ BR nó dẫn tới UC, ERD, Prototype, code,...
+
+Roles nào có quyền gì phải viết vào Business Rules.
+Không thừa, không thiếu, không lan man
+
+----------------
+
+Normal flow chia ra 2 cột: Actor actions và System actions
+Exception quăng ra ở bên cột System
+
+
+Phải ghi rõ trên màn hình/trong form có những fields gì để dev nhìn vào còn code đc.
+
+Assumption là giả định mình cho là đúng trong tương lai.
+
+Chỗ nào ko có thì để "N/A", ko đc để trống hoặc "None".
+
+------------------
+
+TRÁNH TUYỆT ĐỐI copy tài liệu khác (trường có check đạo văn)
+--> Nếu bị phát hiện thì rớt cả nhóm
+
+------------------
+
+Report 4: khoan vẽ sequence
+Chú ý các UML Diagram (sequence và class diagram) phải theo chuẩn. 2.0 cũng đc, 2.4 cũng đc nhưng
+phải bám sát chuẩn, ko đc sáng tạo.
+
+Khi lập trình phải tách trước, gộp sau. Tách để dễ làm rồi sau này muốn gộp gì thì gộp sẽ dễ hơn
+là làm 1 cục xong rồi break.
+
+
+Trình bày về kiến trúc thì phải chỉ rõ đc nó là phần nào trong code.
+
+Report đã có add thì phải có chức năng sửa và xóa vì nó là data thô, ko phải data trích xuất.
+Chỉ có data trích xuất (như Dashboard) mới không cho edit.
+
+Working history (trong salesman details) khác với current working (list các trường mà salesman đó
+phụ trách) (cái này lỗi em, lúc bàn có nói rồi mà em code thiếu)
+
+Sửa cái title của trang (tên hiển thị trên trình duyệt)
+Từ "task" nhạy cảm ghê...
+
+Tránh hardcode
+
+Khi bảo vệ trước hội đồng, phản biện đc thì phải demo đc, chứng minh phần mình đã nói.
+VD: Chức năng cấp lại mật khẩu (role Admin) cho users khi user quên mật khẩu.
+    Thầy duyệt phần phản biện vì hợp lý nhưng hỏi đến demo thì chưa có (lỗi em).
+
+Trên form phải thể hiện rõ fields nào bắt buộc, field nào không bắt buộc.
+(vì như thầy nói thì user lười lắm, cái gì ko bắt thì khỏi điền .-.)
+
+Thiết kế screen phải ý nghĩa, tiện lợi nhất cho người dùng ==> UX
+
+Suy nghĩ về thuật toán.
+Nếu ko có thuật toán thì -1đ chung toàn capstone (?) :<
+Dù ít dù nhiều cũng nên đưa 1 cái thuật toán đơn giản trước để giữ điểm đã rồi sau đó
+sẽ thêm 1 thuật toán THẬT Ý NGHĨA. Ko bắt buộc bao nhiêu cái nhưng nếu hiện thực đc
+thuật toán khó thì sẽ có điểm cộng.
+
+
+
+=========================================================
+|							|
+|      Thứ 3 tuần sau họp tiếp, review 3 reports.	|
+|							|
+=========================================================
+
+
+
+
+
+
+
+P/s: Nay nhóm được khen! ^^
+
