@@ -1,0 +1,42 @@
+Meeting minutes:
+
+- Demo các chức năng, tạo accounts cho chị Tuyền dùng thử
+- Confirm 3 giá trị schoolStatus như hiện tại, tiếng Anh/Việt gì cũng đc cả
+- Công thức KPI và Dashboards đợi chị trải nghiệm xong ngấm rồi mới đưa reqs sau.
+- Xem DS targets theo this SchoolYear. Nếu năm sau có list mới thì là schoolYear mới.
+  Bỏ filter và column "schoolYear" trong bảng.
+- Chia ra 3 bảng riêng biệt: Target schools (chưa HT), In-charged schools (đang HT), Ngưng HT.
+  Mỗi bảng có các chức năng manage riêng.
+- Trang details của Target/In-charged schools, thời gian đầu nó sẽ giống vs report details???
+- Khi chọn option "View reports" trên trang Target/In-charged schools, sẽ chuyển qua trang Reports
+  vs các filter/search field (tên trường) tương ứng đc đổ vào sẵn.
+- Contract có Salesman và Manager đc sửa và ko cho xóa.
+- Target cũ bị kéo theo và có thay đổi status???
+  Target tự thay đổi năm học và purpose....?????
+  ==> Quên chưa hỏi rõ vụ tạo mới và tự thay đổi là sao?
+
+============================
+
+Bugs & notes:
+
+- Schools <Admin> details:
+  + Create new school without Principal --> "Mr.null"
+  + Working status: default đang là null nên nó bị inactive.
+
+- Accounts <Admin> details:
+  + Working status: default đang là null nên nó bị inactive.
+
+- Reports:
+  List đang sort theo ID ASC --> gửi req param DESC, column=date để lấy đc từ newest trở xuống
+
+- 
+
+Sửa UC --> 
+- edit contract trong role Manager 
+- Bỏ phần chú thích MOU trong Business Rules
+
+- phần note của target
+- ID report sort truyền param col & direction=DES để load newest reports
+- Thêm thông báo create/remove thành công sau mỗi action
+
+- 
