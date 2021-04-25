@@ -1,0 +1,53 @@
+Dàn bài thuyết trình
+
+1) Giới thiệu tên đề tài, TV nhóm
+
+2) Giới thiệu Major, product background
+
+3) Bài toán cần giải quyết, vđ hiện tại
+
+4) Giới thiệu tổng quan về sản phẩm:
+   a) Platform (Mobile, app)
+   b) Architecture
+   c) Công nghệ
+
+5) Demo
+   /* mở 2 máy/browser cho 2 roles Manager/Supervisor và Salesman chạy song song) */
+   a)	Role Admin:
+	- CRUD Accounts							FE-01
+	- CRUD (Create/import) trường					FE-02
+   b.1) Role Sales Manager/Supervisor:
+	- CRUD Targets/Incharge (khi chưa có PIC)			FE-03
+	  (đổi schoolStatus là Leads hay Customers)
+	- Assign PICs							FE-03
+   c.1) Role Salesman:
+	- Coi ds trường đi sales --> CRUD reports			FE-04, FE-05
+	- Edit thông tin Hiệu trưởng của trường mình phụ trách		FE-07
+
+   b.2) Role Manager/Supervisor:
+	- Comment vào report						FE-06
+   c.2) Role Salesman:
+	- Edit/Remove reports đã đc comment				FE-05
+	- Create/Edit/View contracts của trường mình phụ trách		FE-08
+
+   b.3) Role Supervisor:
+	- Ko coi đc thông tin contract của Salesman đó.			FE-09
+	Role Manager:
+	- View all contracts của all schools từ all Salesmen		FE-09
+
+   d)	Role Manager/Supervisor/Salesman: (nào cũng đc)
+	- Workplan							FE-10
+
+6) Limitations & Future plan
+
+7) Q&A - Thanks
+
+
+
+
+
+
+
+
+
+
