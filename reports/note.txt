@@ -1,0 +1,4 @@
+1 số "lỗi chính tả" ko sửa đc:
+- unassign (tra từ điển thì có từ này nhưng Word báo từ này sai)
+- Word check theo tiếng Anh-Anh (BE), ko phải tiếng Anh-Mỹ (AE):
+  color --> colour, center --> centre, analyze --> analyse,...
