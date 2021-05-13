@@ -1,0 +1,121 @@
+- Phiếu nghiệm thu:
+  Liệt kê tất cả đề mục, chức năng mà bên doanh nghiệp vs nhóm đã thảo luận và bàn bạc, ký kết
+  => Phải lựa lời tự bảo vệ, phản biện và đưa ra giấy tờ chứng minh
+     vì mình vẫn là làm theo yêu cầu của doanh nghiệp.
+  => Đây là văn hóa doanh nghiệp, từ Work-plan đi xuống (*)
+
+- Admin là chức danh công việc =/= role trong user
+VD: Chị Tuyền là Supervisor
+
+
+- Thêm chức năng đánh giá Salesman cho role Supervisor/Manager
+
+- Từ Work-plan, chị Tuyền gợi ý xuất ra DS các tasks, có start/end time, hoàn thành hay chưa,...
+  Cái này sẽ dùng để đánh giá 
+
+- Dùng thử lại các phần mềm CRM để tham khảo và đưa vô áp dụng trong phần mềm của mình.
+VD: MS Office, MISA, S-Slim,...
+
+- Giải thích file Excel:
+  + New staff, AM (chuyên viên đối ngoại)  ==> Salesman: tìm khách hàng, HĐ, giấy tờ, thu chi, hóa đơn,...
+  + AC (Account Coordinator) (chuyên viên học thuật): các vđ về chuyên môn
+    (1 trường đc giao cho 1 AM + AC)
+
+
+- Ko còn HĐ nữa mà là "SP bán đc" mà đã đạt giá sàn/số tiết/số giờ dạy tối thiểu
+=> Nếu đạt đủ những điều kiện kia thì Manager mới approve là Salesman đó đã hoàn thành HĐ đó,
+   sau khi thỏa những mới tính KPI cho người này.
+
+
+- Nguyên tắc đánh giá 360 độ (ko chỉ Leader hay Manager mà còn gồm tự đánh giá, từ đồng nghiệp, 
+  đối tác và những người khác)
+
+
+- 1 số tiêu chí để assign:
+  + nơi ở (đ/chỉ tạm trú)
+  + nguyện vọng (cái này ko đảm bảo lắm vì nó )
+  + mối quan hệ cá nhân của Salesman
+    (đồng ý di chuyển trong phạm vi 10km,...)
+
+==> Sales Management: data KH (lịch sử,...), data Salesman, 
+
+
+--------------------------------
+
+1/ Định nghĩa Tasks:
+- Sẽ có những task cố định tháng nào cũng vậy và những task khác
+  
+Giai đoạn SALES:
+B1: Đến trường --> Tiếp cận KH		10 trường/ngày
+B2: Gặp gỡ KH				Gặp 3 HT/ngày	<=> 3 report thành công
+    Xin th.tin KH			
+B3: Giới thiệu SP, DV
+B4: Hẹn gặp lần 2,3,4,5,...
+
+
+
+- giai đoạn đi Sales: 1/6 - 30/9
+- deadline chung cho sales trường là 30/9
+- SP ký đc ko quan trọng số trường mà quan trọng là theo sản phẩm.
+
+
+- timeline, người đó pass qua GĐ 1 rồi thì nếu PM thông minh có thể gợi ý
+
+==> Chốt timeline này (hình thức trình bày dọc ngang đều đc)
+
+-------
+
+2/ Định nghĩa KPI:
+- Thứ tự tiêu chí
+  + Services đã ký đc (Manager approve)			60%
+    (bằng cách nào đó cũng phải ký đc)
+    (nếu A và B cùng ký đc HĐ thì ai ký đc cao hơn --> trọng số cao hơn)
+
+  + Reports (gặp bn trường, lấy th.tin HT,...)		25%
+    (đến bước mấy rồi)
+
+  + Targets						15%
+    (số trường giảm theo tháng)
+
+(----------------bỏ--------------)
+  + Work-plan (lập theo Task đc giao)			15%
+    (mức độ chăm chỉ, kỹ năng quản lý th.gian)
+
+- Nếu ko đạt đủ chỉ tiêu trong 1 ngày thì trừ KPI
+
+- KPI có thể chia theo giai đoạn 3 tháng. Vì càng về sau càng ít trường nên ko còn tính đc
+  theo số 10 trường nữa.
+
+- Manager ko quan tâm người Salesman đó đi mấy lần mà sẽ là đi đc đến bước mấy rồi.
+  Report của người Salesman đó đi càng sâu thì KPI cộng càng nhiều.
+
+
+(Đa số Hợp đồng sẽ ký vào khoảng tháng 8, tháng 9)
+
+- Bảng xếp hạng rank Salesman 
+
+--------------------------------
+
+- 1/6 phải xong hết toàn bộ những gì đã bàn hôm nay (sp hoàn thiện, ko phải là demo nữa)
+- 3h chiều T2 hàng tuần: gặp chị Tuyền tại Major
+- Delivery:
+  + 17/5: Đ/n Task
+  + 24/5: Đ/n KPI
+  + 31/5: phần còn lại
+  + 1/6: Slide, hoàn thiện này nọ như 1 buổi bảo vệ thử
+
+--------------------------------
+
+Giải thích:
+(*)
+Work-plan:
+- QL công việc Salesman thông qua Workplan vì 
+- rèn luyện kỹ năng time management skills
+- QL con người khó mà QL đc sự trung thực và mức độ chính xác của thông tin
+--> Đây là 
+
+
+==================
+
+Hội Đồng khen chê gì thì cũng cảm ơn trước.
+
