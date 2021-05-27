@@ -101,7 +101,7 @@ B4: Hẹn gặp lần 2,3,4,5,...
 - Delivery:
   + 17/5: Đ/n Task
   + 24/5: Đ/n KPI
-  + 31/5: phần còn lại
+  + 31/5: Gợi ý Salesman cho Manager assign
   + 1/6: Slide, hoàn thiện này nọ như 1 buổi bảo vệ thử
 
 --------------------------------

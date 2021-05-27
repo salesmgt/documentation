@@ -1,0 +1,4 @@
+- công thức tính giá trị HĐ (cộng trừ nhân chia theo số lớp, số tiết thế nào)
+  => PIC nào mang lại nhiều giá trị cho cty hơn
+
+- 

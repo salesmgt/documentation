@@ -1,0 +1,42 @@
+- KPI có mức sàn chuẩn ko? Bao nhiêu?
+- Số tiết thông thường 1 lần ký là bao nhiêu? Có mức sàn ko?
+==> Có. Nó sẽ lấy từ mức giá sàn và số lớp tối thiểu đi lên.
+    10 lớp * 2 tiết/tuần * 4 tuần/tháng
+
+
+Toán Khoa:	2 lớp, 2 tiết/tuần
+ESL: 		8 lớp, 2 tiết/tuần
+SEL: 		8 lớp, 1 tiết/tuần
+STEAM: 		2 lớp, 2 tiết/tuần
+
+
+- Xếp loại KPI, bao nhiêu % thì hạng gì? Có dùng cái có trong file Excel đc ko?
+
+
+- Manager tự đánh giá tác phong cho Salesman. Trừ thì có lý do trừ. Cộng thì... (chắc cũng cho nhập luôn nhỉ)
+
+
+
+
+- Confirm vụ "Tiềm năng" là School Status chứ ko phải Purpose.
+=> Vậy Purpose của status "Tiềm năng" sẽ là "Theo dõi" phải ko?
+==> Khi này, purpose của "Chưa HT" chỉ còn là "Sales mới"
+- 2 Purpose "Theo dõi", "Chăm sóc": thế nào thì đc tính là đạt/task hoàn thành?
+
+
+===================================================================================
+
+KH Tiềm năng:
+Dạng 1:
+- Năm nay đã tiếp xúc và chưa kí kết đc HĐ (VD họ đang ký vs đối tác khác.
+
+Dạng 2:
+- KH nóng (thân tình, lâu năm).
+
+Dạng 3:
+- Khách mới nhưng mình nhận ra là họ có khả năng cao sẽ ký với mình.
+
+=> Tiềm năng cũng có purpose là Sales mới.
+
+
+Điều kiện hoàn thành task chăm sóc (đây là cách gọi chung cho tr.hợp nhiều tasks)
